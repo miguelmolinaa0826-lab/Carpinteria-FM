@@ -1,8 +1,9 @@
+/* ====== ESTILOS GENERALES ====== */
 body {
     background-color: #f4f1ec;
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 40px;
+    padding: 40px 15px 20px 15px; /* top, right, bottom, left */
 }
 
 h1 {
@@ -14,6 +15,7 @@ p {
     color: #444;
     font-size: 18px;
 }
+
 .menu {
     margin-top: 20px;
 }
@@ -32,11 +34,14 @@ p {
 .menu button:hover {
     background-color: #8a5233;
 }
+
 .productos {
-    display: none;
+    display: none; /* oculto por defecto, se muestra con JS */
     margin-top: 30px;
+    display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .producto {
@@ -50,6 +55,7 @@ p {
 .producto img {
     width: 100%;
     border-radius: 6px;
+    height: auto;
 }
 
 .producto h3 {
@@ -61,72 +67,7 @@ p {
     font-weight: bold;
     color: #333;
 }
-/* ====== MODO CELULAR ====== */
-@media (max-width: 768px) {
 
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu button {
-        width: 80%;
-        font-size: 18px;
-        padding: 14px;
-    }
-
-    .productos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .producto {
-        width: 90%;
-    }
-}
-/* ====== MODO CELULAR ====== */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu button {
-        width: 80%;
-        font-size: 18px;
-        padding: 14px;
-    }
-
-    .productos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .producto {
-        width: 90%;
-    }
-}
 .btn-comprar {
     background-color: #25D366;
     color: white;
@@ -142,3 +83,41 @@ p {
 .btn-comprar:hover {
     background-color: #1ebe5d;
 }
+
+/* ====== ESTILOS PARA CELULAR ====== */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu button {
+        width: 80%;
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .producto {
+        width: 90%;
+    }
+}
+
+
