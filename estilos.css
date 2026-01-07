@@ -142,5 +142,7 @@ body::before {
     z-index: -1; /* detrás de todo */
     transform: translateZ(0);
 }
-
- 
+ body {
+  background: url("fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
